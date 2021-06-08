@@ -1,0 +1,69 @@
+<div class="login_global">
+  <div class="login">
+    <div class="login_text">
+      <h1>Login to the Help Desk</h1>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="test">
+
+        <div class="text">
+          <h2 class="user_text">User Name:</h2>
+          <h2 class="password_text">Password:</h2>
+        </div>
+
+        <div class="input">
+          <input type="email" class="email_input" formControlName="email">
+          <div
+            *ngIf="form.get('email').invalid  && form.get('email').touched"
+            class="validation"
+          >
+            <small *ngIf="form.get('email').errors.required">
+              Поле User Name не может быть пустым!
+            </small>
+
+            <small *ngIf="form.get('email').errors.email">
+              Введите корректный User Name!
+            </small>
+          </div>
+
+          <input type="password" class="password_input" formControlName="password">
+
+          <!--          <pre>{{form.get('password').errors | json}}</pre>-->
+
+          <div
+            *ngIf="form.get('password').invalid  && form.get('password').touched"
+            class="validation"
+          >
+            <small *ngIf="form.get('password').errors.required">
+              Пароль не может быть пустым!
+            </small>
+
+            <small *ngIf="form.get('password').errors.minlength">
+              Длинна должна быть не менее {{form.get('password').errors.minlength.requiredLength}}.
+              Сейчас колличество символов: {{form.get('password').errors.minlength.actualLength}}
+            </small>
+
+            <small *ngIf="form.get('password').errors.maxlength">
+              Длинна должна быть не более {{form.get('password').errors.maxlength.requiredLength}}.
+              Сейчас колличество символов: {{form.get('password').errors.maxlength.actualLength}}
+            </small>
+
+            <small *ngIf="form.get('password').errors.pattern">
+              Пароль должен содержать хотя бы одну цифру, Заглавную букву, строчную букву, и любой из символов:
+              ~."(),:;<>@[]!#$%&'*+-/=?^_`|} !
+            </small>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="btn">
+        <button class="button" type="submit" [disabled]="form.invalid" >Enter</button>
+      </div>
+    </form>
+<!--    routerLink="tickets"-->
+  </div>
+</div>
+
+

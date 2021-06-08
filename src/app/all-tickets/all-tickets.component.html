@@ -1,0 +1,67 @@
+<div class="all_tickets">
+  <div class="test">
+    <div class="createNewTicket">
+
+      <button (click)="logout()" class="logout">Logout</button>
+      <button class="create_new_ticket" routerLink="/createNewTicket">Create New Ticket</button>
+    </div>
+    <div class="btn">
+      <div class="left">
+        <button class="all_ticket" autofocus>All Ticket</button>
+      </div>
+      <div class="right">
+        <button class="my_tickets">My Tickets</button>
+      </div>
+    </div>
+    <div class="input">
+      <input type="text" name="filter" class="input_text" #fil (change)="outuput(fil.value)">
+    </div>
+
+    <div>
+
+      <div class="divTable" style="width: 100%;">
+        <div class="divTableBody">
+          <div class="divTableRow">
+            <div class="divTableCellCap">Id
+              <button (click)="sortByIdStart()">&#11015;</button>
+              <button (click)="sortByIdEnd()">&#11014;</button>
+            </div>
+            <div class="divTableCellCap">Name
+              <button (click)="sortByNameStart()">&#11015;</button>
+              <button (click)="sortByNameEnd()">&#11014;</button>
+            </div>
+            <div class="divTableCellCap">Desired Date
+              <button (click)="sortByDateStart()">&#11015;</button>
+              <button (click)="sortByDateEnd()">&#11014;</button>
+            </div>
+            <div class="divTableCellCap">Urgency
+              <button (click)="sortByUrgencyStart()">&#11015;</button>
+              <button (click)="sortByUrgencyEnd()">&#11014;</button>
+            </div>
+            <div class="divTableCellCap">Status
+              <button (click)="sortByStatusStart()">&#11015;</button>
+              <button (click)="sortByStatusEnd()">&#11014;</button>
+            </div>
+            <div class="divTableCellCap">Actions</div>
+          </div>
+          <div class="divTableRow" *ngFor="let ticket of tickets">
+            <div class="divTableCell">{{ticket.id}}</div>
+            <div class="divTableCell"><a [routerLink]="['/ticketOverview',ticket.id]">{{ticket.name}}</a></div>
+            <div class="divTableCell">{{ticket.desired_resolution_date}}</div>
+            <div class="divTableCell">{{ticket.urgency}}</div>
+            <div class="divTableCell">{{ticket.state}}</div>
+            <div class="divTableCell">
+              <select name="submit" class="btnTable">
+                <option value='Action 1'>Submit</option>
+                <option value='Action 2'>Approve</option>
+                <option value='Action 3'>View Feedback</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

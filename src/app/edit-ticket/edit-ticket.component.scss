@@ -1,0 +1,199 @@
+.global {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+  //border: 3px solid black;
+  flex-direction: column;
+}
+
+.logo {
+  width: 100%;
+  //border: 3px solid black;
+  display: flex;
+  justify-content: flex-start;
+}
+
+// input global
+.text_logo {
+  //border: 3px solid black;
+  padding: 0;
+  width: 2000px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// кнопка назад
+.ticket_list {
+  //border: 3px solid black;
+  width: 337px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket_list_button {
+  width: 300px;
+  height: 70px;
+  font-size: 200%;
+  background-color: #38c800;
+  color: white;
+  border-radius: 12px;
+  border-width: 0;
+  outline: none;
+}
+
+// Заголовок
+.create_new_ticket {
+  width: 1400px;
+  font-size: 200%;
+  //border: 3px solid black;
+
+}
+
+// input Главный
+.input_global {
+  //border: 3px solid black;
+  padding: 0;
+  width: 2000px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.input_name {
+
+  justify-content: flex-end;
+  //border: 3px solid black;
+  width: 700px;
+  font-size: 150%;
+}
+
+h2 {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+
+// inputs
+.input {
+  height: 100%;
+  //border: 3px solid black;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding-left: 20px;
+}
+
+.text_input {
+  width: 500px;
+  height: 50px;
+  font-size: 250%;
+
+}
+
+.textDisription_input {
+  align-items:flex-start;
+  width: 700px;
+  height: 160px;
+  font-size: 250%;
+
+}
+
+.textComment_input {
+  width: 700px;
+  height: 50px;
+  font-size: 250%;
+
+}
+
+.date_input {
+  width: 500px;
+  height: 50px;
+  font-size: 250%;
+}
+
+.select {
+  width: 220px;
+  height: 50px;
+  background-color: #38c800;
+  border-radius: 12px;
+  font-size: 150%;
+  color: white;
+  outline: none;
+  border-width: 0;
+  padding-left: 10px;
+}
+
+.browse {
+  width: 220px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #38c800;
+  border-radius: 12px;
+  font-size: 150%;
+  color: white;
+  outline: none;
+  border-width: 0;
+  padding-left: 10px;
+}
+
+// button
+
+.button {
+  //border: 3px solid black;
+  display: flex;
+  justify-content: flex-end;
+  width: 2000px;
+  height: 100%;
+
+}
+
+// save button
+.save {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  //border: 3px solid black;
+
+}
+
+.saveBtn {
+  width: 300px;
+  height: 70px;
+  font-size: 200%;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 12px;
+  outline: none;
+  border: 1px solid #38c800;
+}
+
+// submit button
+.submit {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  //border: 3px solid black;
+  padding-left: 50px;
+}
+
+.submitBtn {
+  width: 300px;
+  height: 70px;
+  font-size: 200%;
+  background-color: #38c800;
+  color: white;
+  border-radius: 12px;
+  border-width: 0;
+  outline: none;
+}

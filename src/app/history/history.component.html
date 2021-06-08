@@ -1,0 +1,21 @@
+<div class="global">
+  <div class="divTable" style="width: 100%;">
+    <div class="divTableBody">
+      <div class="divTableRowHider">
+        <div class="divTableCell">Date</div>
+        <div class="divTableCell">User</div>
+        <div class="divTableCell">Action</div>
+        <div class="divTableCell">Descriptions</div>
+      </div>
+      <div class="divTableRow" *ngFor="let item of history">
+        <div class="divTableCell">{{item.date}}</div>
+        <div class="divTableCell">{{item.user}}</div>
+        <div class="divTableCell">{{item.action}}</div>
+        <div class="divTableCell">{{item.description}}</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button (click)="tableFive()" class="btnMore">More History</button>
+</div>
+<!-- DivTable.com -->

@@ -1,0 +1,81 @@
+/* DivTable.com */
+.divTable {
+  display: table;
+  width: 100%;
+  border: 1px solid #bababa;
+  font-size: 200%;
+}
+
+.divTableRow {
+  display: table-row;
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+}
+
+.divTableCell, .divTableHead {
+  border: 1px solid #bababa;
+  display: table-cell;
+  padding: 25px 10px;
+}
+
+.divTableHeading {
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: bold;
+}
+
+.divTableFoot {
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: bold;
+}
+
+.divTableBody {
+  display: table-row-group;
+}
+
+.divTableRowHider {
+  display: table-row;
+  background-color: #bababa;
+}
+
+.input {
+  display: flex;
+  justify-content: flex-end;
+}
+
+// форма
+.form {
+  width: 600px;
+  height: 60px;
+  margin-right: 30px;
+  font-size: 300%;
+
+}
+
+// Кнопка add
+.btnAdd {
+  width: 300px;
+  height: 70px;
+  font-size: 200%;
+  background-color: #38c800;
+  color: white;
+  border-radius: 12px;
+  border-width: 0;
+  outline: none;
+}
+
+// Кнопка More
+.btnMore {
+  width: 300px;
+  height: 70px;
+  font-size: 200%;
+  background-color: #38c800;
+  color: white;
+  border-radius: 12px;
+  border-width: 0;
+  outline: none;
+}

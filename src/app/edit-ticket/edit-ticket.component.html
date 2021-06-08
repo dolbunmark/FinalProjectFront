@@ -1,0 +1,87 @@
+
+
+<form [formGroup]="form" class="global" (ngSubmit)="submit()">
+  <div class="logo">
+    <!--кнопка назад-->
+    <div class="ticket_list">
+      <button class="ticket_list_button" [routerLink]="['/ticketOverview',id.id]">Ticket Overview</button>
+    </div>
+
+
+    <!--кнопка назад и Заголовок-->
+    <div class="text_logo">
+
+      <!--Заголовок-->
+      <div class="create_new_ticket">
+        <h1>Edit Ticket ( )</h1>
+      </div>
+    </div>
+  </div>
+
+
+  <!--главный для блока inputs-->
+  <div class="input_global">
+
+    <!--название для input-->
+    <div class="input_name">
+      <h2 class="h2">Category</h2>
+      <br>
+      <h2>Name</h2>
+      <br>
+      <h2>Disription</h2>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>Urgency</h2>
+      <br>
+      <h2>Decided resolution date</h2>
+      <br>
+      <h2>Add attachment</h2>
+      <br>
+      <h2>Comment</h2>
+    </div>
+
+    <!--input-->
+    <div class="input">
+      <select name="select" class="select" formControlName="category">
+        <option value='Submit'>Submit</option>
+        <option value='Approve'>Approve</option>
+        <option value='View Feedback'>View Feedback</option>
+      </select>
+      <br>
+      <input type="text" class="text_input" formControlName="name">
+      <br>
+      <textarea name="" id="" cols="30" rows="10" class="textDisription_input" formControlName="disription"></textarea>
+      <br>
+
+      <select name="select" class="select" formControlName="urgency">
+        <option value='High'>High</option>
+        <option value='Medium'>Medium</option>
+        <option value='Low'>Low</option>
+      </select>
+      <br>
+      <input type="date" class="date_input"  formControlName="date">
+      <br>
+      <label class="browse">
+        <input type="file" style="display: none;" formControlName="add_attachment">
+        <a>Browse</a>
+      </label>
+      <br>
+      <textarea name="" cols="30" rows="10" class="textComment_input" formControlName="comment"></textarea>
+
+    </div>
+  </div>
+
+  <!--кнопки-->
+  <div class="button">
+    <div class="save">
+      <button class="saveBtn">Save as Draft</button>
+    </div>
+    <div class="submit">
+      <button class="submitBtn" type="submit" >Submit</button>
+    </div>
+  </div>
+</form>
+

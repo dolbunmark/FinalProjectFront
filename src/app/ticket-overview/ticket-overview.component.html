@@ -1,0 +1,72 @@
+<div class="global">
+
+  <!--   Шапка-->
+  <div class="containerParent">
+    <div class="TicketList">
+      <button class="buttonTicketList" routerLink="/tickets">Ticket List</button>
+    </div>
+
+    <h1>Ticket({{ticket.id}}) - Task {{ticket.id}}</h1>
+
+    <div class="Edit">
+      <button class="buttonEdit" [routerLink]="['/editTicket', ticket.id]">Edit</button>
+    </div>
+  </div>
+
+  <!--  Инфо-->
+  <div class="containerParent2">
+
+    <div class="info">
+      <div class="containerOne">
+        <p>Create on:</p>
+        <p>Status:</p>
+        <p>Urgency</p>
+        <p>Decided resolution date</p>
+        <p>Owner:</p>
+        <p>Approve:</p>
+        <p>Assignee</p>
+        <p>Attachment:</p>
+        <p>Descriptions:</p>
+        <br>
+        <br>
+        <br>
+        <p>Category:</p>
+      </div>
+      <div class="containerTwo">
+        <p>{{ticket.create_on}}</p>
+        <p>{{ticket.state}}</p>
+        <p>{{ticket.urgency}}</p>
+        <p>{{ticket.desired_resolution_date}}</p>
+        <p>{{ticket.owner}}</p>
+        <p>{{ticket.approve}}</p>
+        <p>{{ticket.assignee}}</p>
+        <br>
+        <br>
+        <div class="textarea">
+          <textarea name="" id="" cols="20" rows="5">{{ticket.description}}</textarea>
+        </div>
+        <p>{{ticket.category}}</p>
+      </div>
+    </div>
+
+    <div class="LeaveFeedback">
+      <button class="buttonLeaveFeedback">Leave Feedback</button>
+    </div>
+
+  </div>
+
+  <div class="button">
+    <div>
+      <button class="history" [routerLink]="['history',ticket.id]">History</button>
+    </div>
+    <div>
+      <button class="comment" [routerLink]="['comment',ticket.id]">Comment</button>
+    </div>
+  </div>
+
+  <div class="router">
+    <router-outlet></router-outlet>
+  </div>
+
+
+</div>

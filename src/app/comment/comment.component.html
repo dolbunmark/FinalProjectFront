@@ -1,0 +1,30 @@
+<div class="global">
+  <br>
+  <div class="input">
+    <form [formGroup]="form">
+      <div>
+        <input type="text" formControlName="text" class="form">
+        <button (click)="addComment()" class="btnAdd">Add Comment</button>
+      </div>
+    </form>
+  </div>
+  <br>
+
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRowHider">
+        <div class="divTableCell">Date</div>
+        <div class="divTableCell">&nbsp;User</div>
+        <div class="divTableCell">&nbsp;Comment</div>
+      </div>
+      <div class="divTableRow" *ngFor="let item of ticket">
+        <div class="divTableCell">{{item.date}}</div>
+        <div class="divTableCell">{{item.user}}</div>
+        <div class="divTableCell">{{item.text}}</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button (click)="table()" class="btnMore">More Comments</button>
+</div>
+
